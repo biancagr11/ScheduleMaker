@@ -48,8 +48,8 @@ public abstract class AbstractFileRepository<ID, E extends Entity<ID>> extends I
     }
 
     @Override
-    public E delete(ID id) {
-        E e=super.delete(id);
+    public void delete(ID id) {
+
         try {
             PrintWriter pw = new PrintWriter(fileName);
             pw.close();
@@ -59,7 +59,7 @@ public abstract class AbstractFileRepository<ID, E extends Entity<ID>> extends I
         for(E entity:findAll()){
             writeToFile(entity);
         }
-        return e;
+
     }
 
     protected void writeToFile(E entity){

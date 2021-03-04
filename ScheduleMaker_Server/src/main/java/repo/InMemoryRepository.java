@@ -38,11 +38,10 @@ public class InMemoryRepository<ID, E extends Entity<ID>> implements Repository<
     }
 
     @Override
-    public E delete(ID id) {
+    public void delete(ID id) {
         if(id==null)
             throw new IllegalArgumentException("Id must be not null");
-        return entities.remove(id);
-
+        entities.remove(id);
     }
 
     @Override

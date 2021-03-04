@@ -41,9 +41,10 @@ public class Service implements Observable {
     }
 
     public Employee deleteEmploye(Integer id){
-        Employee employee=employeeRepo.delete(id);
+        //TODO
+        employeeRepo.delete(id);
         notifyObservers();
-        return employee;
+        return null;
     }
 
     public Employee addEmployee(String firstName, String lastName, String job){
