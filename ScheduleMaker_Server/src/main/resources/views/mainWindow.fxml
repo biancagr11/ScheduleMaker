@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #e4ede9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMainWindow">
+   <top>
+      <HBox fx:id="barBox" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="759.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" style="-fx-background-color: #e4ede9;" fx:id="minusIcon">
+               <graphic>
+                  <FontAwesomeIcon  fill="#8bc9b9" glyphName="MINUS" size="1.5em">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                  </FontAwesomeIcon>
+               </graphic>
+            </Button>
+            <Button fx:id="circleIcon" mnemonicParsing="false" style="-fx-background-color: #e4ede9;">
+               <graphic>
+                  <FontAwesomeIcon  fill="#8bc9b9" glyphName="CIRCLE" size="1.2em">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </FontAwesomeIcon>
+               </graphic>
+            </Button>
+            <Button fx:id="closeIcon" mnemonicParsing="false" style="-fx-background-color: #e4ede9;">
+               <graphic>
+                  <FontAwesomeIcon  fill="#8bc9b9" glyphName="CLOSE" size="1.5em">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </FontAwesomeIcon>
+               </graphic>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="445.0" prefWidth="195.0" spacing="20.0" style="-fx-background-color: #36a897;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="128.0" prefWidth="198.0">
+               <children>
+                  <Label layoutX="4.0" layoutY="42.0" prefHeight="60.0" prefWidth="195.0" style="-fx-stroke: black; -fx-stroke-width: 1;" text="Schedule Maker " textFill="WHITE">
+                     <font>
+                        <Font name="Gabriola" size="37.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="employeeButton" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleEmployeeButton" prefHeight="45.0" prefWidth="195.0" style="-fx-background-color: #8bc9b9;" text="Employees" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Regular" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                 <FontAwesomeIcon fill="WHITE" glyphName="GROUP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </FontAwesomeIcon>
+               </graphic>
+
+            </Button>
+            <Button fx:id="scheduleButton" graphicTextGap="10.0" mnemonicParsing="false" onAction="#handleScheduleButton" prefHeight="45.0" prefWidth="195.0" style="-fx-background-color: #8bc9b9;" text="Schedule" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Dubai Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CALENDAR">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </FontAwesomeIcon>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="195.0" style="-fx-background-color: #8bc9b9;" text="History" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="HISTORY">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </FontAwesomeIcon>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

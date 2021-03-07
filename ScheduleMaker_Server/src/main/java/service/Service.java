@@ -3,6 +3,7 @@ package service;
 import domain.*;
 import observer.Observable;
 import observer.Observer;
+import repo.EmployeeDatabaseRepository;
 import repo.EmployeeRepository;
 
 import java.util.ArrayList;
@@ -10,12 +11,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Service implements Observable {
-    private EmployeeRepository employeeRepo;
+    private EmployeeDatabaseRepository employeeRepo;
     private List<Employee> involvedEmployees=new ArrayList<>();
     private List<Employee> avoidedEmployees=new ArrayList<>();
 
 
-    public Service(EmployeeRepository employeeRepo){
+    public Service(EmployeeDatabaseRepository employeeRepo){
         this.employeeRepo =employeeRepo;
 
     }
